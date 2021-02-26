@@ -1,0 +1,54 @@
+.abonements h2 {
+  font-family: $font-bebas;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: $blue;
+}
+
+.abonements__duration {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.abonements__duration li {
+  font-family: $font-roboto;
+  font-size: 20px;
+  line-height: 150%;
+  color: $blue;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.abonements__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.abonements__item h3 {
+  font-family: $font-roboto;
+  color: $blue;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 40px;
+}
+
+.abonements__price {
+  font-family: $font-roboto;
+  color: $blue-1;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150%;
+}
+
+.abonements__options {
+  font-family: $font-roboto;
+  color: $grey;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}

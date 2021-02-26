@@ -1,0 +1,105 @@
+.promotions h2 {
+  font-family: $font-bebas;
+  color: $blue;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+}
+
+.promotions__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.promotions__main {
+  background-color: $red;
+  background-image: url("../img/promotions-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 280px 462px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/promotions-desktop@2x.jpg");
+  }
+}
+
+.promotions__text p {
+  font-family: $font-roboto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: $white;
+}
+
+.promotions__year {
+  font-family: $font-roboto;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 156%;
+  color: $white;
+}
+
+.promotions__text span {
+  color: $white;
+  font-family: $font-roboto;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 156%;
+}
+
+.promotions__button {
+  color: $white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid $white;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.promotions-offers {
+  display: flex;
+  flex-direction: column;
+}
+
+.promotions-offers__item {
+  border: 7px solid $white;
+  border-image: linear-gradient(170deg, #d10a42, #00359f);
+  border-image-slice: 1;
+}
+
+.promotions-offers__item-text h3 {
+  font-family: $font-roboto;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 150px;
+  color: $blue-3;
+}
+
+.promotions-offers__item-text p {
+    font-family: $font-roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: $blue-3;
+}
+
+.promotions-offers__button {
+  color: $blue-3;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid $white;
+  
+    &:hover {
+      opacity: 0.5;
+    }
+}
+
+

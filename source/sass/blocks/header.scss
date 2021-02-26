@@ -1,0 +1,29 @@
+.header {
+  position: relative;
+  width: 100%;
+  background: url("../img/main-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-color: red;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 29px;
+}
+
+.header__nav-item {
+  font-family: $font-bebas;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px; 
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: $white; 
+}
+
+
+
+
+  

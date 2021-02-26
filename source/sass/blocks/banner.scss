@@ -1,0 +1,74 @@
+.banner {
+  display: flex;
+}
+
+.banner__title {
+  font-family: $font-bebas;
+  color: $white; 
+  text-transform: uppercase;
+  font-size: 109px;
+  line-height: 109px;
+  text-align: right;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.banner__title p {
+  margin: 0;
+}
+
+.banner__city {
+  font-size: 49px;
+  line-height: 59px;
+}
+
+.banner__subtext {
+  list-style: none;
+  font-family: $font-roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: $white; 
+}
+
+.banner__button {
+  display: block;
+  width: 230px;
+  height: 57px;
+  box-sizing: border-box;
+  border: 0;
+  outline: 4px solid $white;
+  font-family: $font-roboto;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+}
+  
+.banner__social {
+  list-style: none;
+  font-family: $font-roboto;
+  font-size: 12px;
+  line-height: 14px;
+  color: $white;
+}
+
+.banner__social a {
+  font-family: $font-roboto;
+  font-size: 12px;
+  line-height: 14px;
+  color: $white;
+  margin: 5px;
+
+  &:hover {
+    color: $black;
+  }
+}

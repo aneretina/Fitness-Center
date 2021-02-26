@@ -1,0 +1,68 @@
+.events-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.events__main {
+  background-color: $red;
+}
+
+.events__header h2 {
+  font-family: $font-bebas;
+  color: $white;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+}
+
+.events__timetable {
+  display: flex;
+  flex-direction: column;
+}
+
+.events-date p,
+.events-date__time p,
+.events h3 {
+  font-family: $font-roboto;
+  color: $white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+  
+
+.events-date__number span,
+.events-date__time span {
+  font-weight: 700;
+  color: $white;
+  font-family: $font-roboto;
+  font-size: 40px;
+  line-height: 150%;
+}
+
+.events-date__month span {
+  font-family: $font-roboto;
+  color: $white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.events__button {
+  font-family: $font-roboto;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  outline: 4px solid $white;
+  color: $white;
+  padding: 25px 102px;
+  display: block;
+  text-align: center;
+  
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+}
