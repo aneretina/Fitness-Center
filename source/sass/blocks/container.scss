@@ -6,3 +6,10 @@
     box-sizing: border-box;
   }
   
+@media (max-width: $mobile-width) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+  

@@ -1,17 +1,94 @@
+.trainers {
+  padding-top: 115px;
+  padding-bottom: 96px;
+}
+
 .trainers h2 {
   font-family: $font-bebas;
   color: $blue;
   font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;
+  margin: 0;
 }
 
 .trainers__list {
+  position: relative;
   list-style: none;
   display: flex;
   flex-direction: row;
+  margin-top: 52px;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.trainers__item {
+  position: relative;
+  padding-right: 40px;
 }
 
 .trainers__info {
   display: none;
+}
+
+.trainers__item h3 {
+  margin: 0;
+  font-family: $font-roboto;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  width: 100%;
+  position: absolute;
+  top: 242px;
+  left: -20px;
+  text-align: center;
+  color: $white;
+}
+
+.trainers__button {
+  position: absolute;
+}
+
+@media (max-width: $tablet-width) {
+  .trainers {
+    padding-top: 93px;
+    padding-bottom: 79px;
+  }
+ 
+  .trainers h2 {
+    font-size: 42px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  .trainers img {
+    width: 268px;
+    height: 294px;
+  }
+
+  .trainers__list {
+    margin-top: 41px;
+  }
+}
+  
+@media (max-width: $mobile-width) {
+  .trainers {
+    padding-top: 64px;
+    padding-bottom: 54px;
+  }
+ 
+  .trainers h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .trainers img {
+    width: 226px;
+    height: 274px;
+  }
+
+  .trainers__list {
+    max-width: 566px;
+    width: 100%;
+  }
 }

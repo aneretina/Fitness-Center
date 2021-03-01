@@ -1,17 +1,29 @@
+.promotions {
+  padding-top: 102px;
+  padding-bottom: 118px;
+}
+
 .promotions h2 {
+  text-align: center;
   font-family: $font-bebas;
   color: $blue;
   font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;
+  margin: 0;
 }
 
 .promotions__wrapper {
+  padding-top: 51px;
+  max-height: 462px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .promotions__main {
+  min-width: 560px;
   background-color: $red;
   background-image: url("../img/promotions-desktop@1x.jpg");
   background-repeat: no-repeat;
@@ -23,20 +35,29 @@
   }
 }
 
-.promotions__text p {
+.promotions__text {
+  padding-top: 42px;
+  padding-left: 48px;
+}
+
+.promotions__description {
+  margin: 0;
   font-family: $font-roboto;
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
   color: $white;
+  max-width: 189px;
+  padding-top: 4px;
 }
 
 .promotions__year {
   font-family: $font-roboto;
   font-weight: 700;
   font-size: 28px;
-  line-height: 156%;
+  line-height: 28px;
   color: $white;
+  margin: 0;
 }
 
 .promotions__text span {
@@ -44,12 +65,16 @@
   font-family: $font-roboto;
   font-weight: 700;
   font-size: 70px;
-  line-height: 156%;
+  line-height: 127%;
 }
 
 .promotions__button {
+  display: block;
+  width: 79px;
+  margin-top: 190px;
   color: $white;
   font-weight: 700;
+  font-family: $font-roboto;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
@@ -63,10 +88,14 @@
 
 .promotions-offers {
   display: flex;
+  min-height: 462px;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .promotions-offers__item {
+  min-width: 550px;
+  min-height: 197px;
   border: 7px solid $white;
   border-image: linear-gradient(170deg, #d10a42, #00359f);
   border-image-slice: 1;
@@ -76,30 +105,169 @@
   font-family: $font-roboto;
   font-weight: 700;
   font-size: 26px;
-  line-height: 150px;
+  line-height: 150%;
   color: $blue-3;
+  margin: 0;
 }
 
 .promotions-offers__item-text p {
-    font-family: $font-roboto;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 140%;
-    color: $blue-3;
+  padding-top: 3px;
+  font-family: $font-roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  color: $blue-3;
+  margin: 0;
+}
+
+.promotions-offers__item-text {
+  box-sizing: border-box;
+  padding-top: 18px;
+  padding-left: 31px;
 }
 
 .promotions-offers__button {
+  display: block;
+  margin-top: 72px;
   color: $blue-3;
   font-weight: 700;
+  font-family: $font-roboto;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  border-bottom: 1px solid $white;
+  border-bottom: 1px solid $blue-3;
+  width: 68px;
   
     &:hover {
       opacity: 0.5;
     }
 }
+
+@media (max-width: $tablet-width) {
+  .promotions {
+    min-height: 764px;
+    padding-top: 75px;
+    padding-bottom: 121px;
+  }
+
+  .promotions h2 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .promotions__wrapper {
+    padding-top: 42px;
+  }
+
+  .promotions__main {
+    min-height: 299px;
+    width: 100%;
+    background-size: 399px 462px;
+    background-image: url("../img/promotions-tablet@1x.jpg");
+  
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/promotions-tablet@2x.jpg");
+    }
+  }
+
+  .promotions-offers {
+    min-width: 678px;
+    margin-top: 30px;
+    min-height: 211px;
+    flex-direction: row;
+  }
+
+  .promotions-offers__item {
+    min-width: 0;
+    width: 46%;
+    min-height: 198px;
+  }
+
+  .promotions-offers__item--1 p {
+    padding-right: 56px;
+  }
+
+  .promotions-offers__item--1 a {
+    margin-top: 48px;
+  }
+}  
+
+@media (max-width: $mobile-width) {
+  .promotions {
+    min-height: 1100px;
+    padding-top: 44px;
+  }
+
+  .promotions h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .promotions__wrapper {
+    padding-top: 42px;
+    flex-wrap: wrap;
+  }
+
+  .promotions__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+    padding-top: 38px;
+    padding-left: 0;
+  }
+
+  .promotions__main {
+    min-height: 598px;
+    width: 100%;
+    background-size: 290px 290px;
+    background-image: url("../img/promotions-mobile@1x.jpg");
+    background-position: top 300px left 0;
+  
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/promotions-mobile@2x.jpg");
+    }
+  }
+
+  .promotions__description {
+    text-align: center;
+  }
+
+  .promotions-offers__button {
+    margin-top: 28px;
+  }
+
+  .promotions-offers {
+    min-width: 100%;
+    margin-top: 36px;
+    flex-direction: column;
+  }
+
+  .promotions-offers__item {
+    min-width: 0;
+    width: 100%;
+    min-height: 194px;
+    margin-bottom: 25px;
+  }
+
+  .promotions-offers__item-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 23px;
+    padding-left: 0;
+  }
+  
+
+  .promotions-offers__item--1 p {
+    padding-right: 56px;
+  }
+
+  .promotions-offers__item--1 a {
+    margin-top: 48px;
+  }
+}  
 
 

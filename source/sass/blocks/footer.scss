@@ -1,6 +1,13 @@
 .footer__wrapper {
   display: flex;
   flex-direction: row;
+  width: 100%;
+}
+
+.footer__consulting-wrapper {
+  box-sizing: border-box;
+  padding-left: 103px;
+  padding-top: 68px;
 }
 
 .footer__consulting {
@@ -12,12 +19,15 @@
 .footer__consulting h2,
 .footer__contacts h2 {
   font-family: $font-bebas;
+  font-weight: 700;
   font-size: 49px;
   line-height: 64px;
   letter-spacing: 0.03em;
+  margin: 0;
 }
 
 .footer__form {
+  padding-top: 25px;
   width: 410px;
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +40,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .footer__form input {
   font-family: $font-roboto;
   font-weight: 400;
@@ -59,7 +70,8 @@
   border: 3px solid $white;
   color: $white;
   box-shadow: none;
-  margin-top: 30px;
+  margin-top: 33px;
+  text-transform: uppercase;
 }
 
 .footer__contacts {
@@ -69,20 +81,36 @@
   color: $blue;
 }
 
+.footer__contacts-wrapper {
+  box-sizing: border-box;
+  padding-left: 123px;
+  padding-top: 65px;
+}
+
 .footer__contacts-content {
   display: flex;
   flex-direction: row;
   font-family: $font-roboto;
+  padding-top: 32px;
 }
 
 .footer__contacts-item {
   width: 50%;
 }
 
+.footer__contacts-item--col2 {
+  padding-left: 21px;
+}
+
+.footer__contact {
+  padding-bottom: 20px;
+}
+
 .footer__contact h3 {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
+  margin: 0;
 }
 
 .footer__contact p,
@@ -91,11 +119,21 @@
   font-size: 14px;
   line-height: 21px;
   text-decoration: none;
+  margin: 0;
+  color: $blue;
 }
 
 .footer__nav {
   background-color: $blue-4;
   color: $white;
+  padding-bottom: 33px;
+}
+
+.footer__nav-container {
+  padding-top: 46px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .footer__logo {
@@ -108,9 +146,16 @@
 
 .footer__pages {
   list-style: none;
+  min-width: 454px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  margin-left: 58px;
+  margin-top: 0;
+  padding: 0;
+}
+
+.footer__pages li {
+  padding-right: 37px;
 }
 
 .footer__pages a {
@@ -125,6 +170,202 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  min-width: 109px;
+}
+
+@media (max-width: $tablet-width) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+
+  .footer__consulting {
+    width: 100%;
+    padding-bottom: 71px;
+  }
+
+  .footer__consulting-wrapper {
+    padding-left: 132px;
+    padding-top: 75px;
+  }
+
+  .footer__consulting h2,
+  .footer__contacts h2 {
+    font-size: 42px;
+    line-height: 42px;
+    text-align: left;
+  }
+
+  .footer__form {
+    width: 472px;
+    padding-top: 20px;
+  }
+
+  .footer__form input {
+    width: 206px;
+    padding: 10px 0;
+  }
+
+  .footer__form-button {
+    margin-top: 27px;
+  }
+
+  .footer__contacts {
+    width: 100%;
+    min-height: 350px;
+  }
+
+  .footer__contacts-wrapper {
+    padding-left: 132px;
+    padding-top: 68px;
+  }
+
+  .footer__contacts-content {
+    flex-direction: column;
+    padding-top: 37px;
+  }
+
+  .footer__contact h3 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .footer__contact p,
+  .footer__contact a {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .footer__contacts-item--col2 {
+    padding-left: 0;
+  }
+
+  .footer__pages {
+    min-width: 432px;
+  }
+  
+  .footer__pages li {
+    padding-right: 31px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+
+  .footer__consulting {
+    width: 100%;
+    padding-bottom: 71px;
+  }
+
+  .footer__consulting-wrapper {
+    min-width: 290px;
+    padding-left: 13px;
+    padding-top: 72px;
+  }
+
+  .footer__consulting h2,
+  .footer__contacts h2 {
+    font-size: 32px;
+    line-height: 32px;
+    text-align: left;
+  }
+
+  .footer__form {
+    width: 100%;
+    padding-top: 27px;
+  }
+
+  .footer__form input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 24px;
+  }
+
+  .footer__form-button {
+    width: 294px;
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .footer__contacts {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+
+  .footer__contact {
+    padding-bottom: 24px;
+  }
+
+  .footer__contacts-wrapper {
+    padding-left: 14px;;
+    padding-top: 68px;
+  }
+
+  .footer__contacts-content {
+    padding-top: 37px;
+  }
+
+  .footer__contact h3 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .footer__contact p,
+  .footer__contact a {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .footer__contacts-item {
+    width: 100%;
+  }
+
+  .footer__nav-container {
+    position: relative;
+  }
+
+  .footer__logo {
+    position: absolute;
+    left: 16px;
+    top: 50px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .footer__nav-container {
+    padding-top: 50px;
+    flex-direction: column;
+  }
+
+  .footer__contacts-item--col2 {
+    padding-left: 0;
+  }
+
+  .footer__pages {
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 0;
+    align-self: stretch;
+    margin-left: 0;
+    margin-top: 0;
+    height: 120px;
+  }
+  
+  .footer__pages li {
+    padding-right: 86px;
+    padding-bottom: 21px;
+  }
+
+  .footer-page {
+    padding-top: 39px;
+  }
+
+  .footer__social {
+    min-width: 0;
+    width: 50%;
+  }
 }
   
 

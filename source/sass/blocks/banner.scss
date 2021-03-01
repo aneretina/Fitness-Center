@@ -1,28 +1,48 @@
 .banner {
+  position: relative;
+}
+
+.banner__content {
   display: flex;
+  flex-direction: column;
+}
+
+.banner__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .banner__title {
-  font-family: $font-bebas;
   color: $white; 
   text-transform: uppercase;
-  font-size: 109px;
-  line-height: 109px;
   text-align: right;
-  letter-spacing: 0.03em;
   margin: 0;
+  padding-left: 50px;
+  padding-top: 114px;
 }
 
-.banner__title p {
+.banner__title h2 {
+  font-family: $font-bebas;
+  letter-spacing: 0.04em;
   margin: 0;
+  font-size: 109px;
+  line-height: 109px;
+  padding-top: 5px;
 }
 
 .banner__city {
+  font-family: $font-bebas;
   font-size: 49px;
   line-height: 59px;
+  margin: 0;
 }
 
 .banner__subtext {
+  position: absolute;
+  top: 286px;
+  left: -21px;
+  text-align: right;
   list-style: none;
   font-family: $font-roboto;
   font-weight: 400;
@@ -33,9 +53,10 @@
 
 .banner__button {
   display: block;
-  width: 230px;
+  min-width: 230px;
   height: 57px;
   box-sizing: border-box;
+  padding-top: 22px;
   border: 0;
   outline: 4px solid $white;
   font-family: $font-roboto;
@@ -46,6 +67,8 @@
   text-transform: uppercase;
   text-align: center;
   color: $white;
+  margin-top: 56px;
+  margin-left: 120px;
   
   &:hover {
     background-color: $white;
@@ -54,21 +77,133 @@
 }
   
 .banner__social {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
   list-style: none;
   font-family: $font-roboto;
   font-size: 12px;
   line-height: 14px;
   color: $white;
+  padding-bottom: 27px;
+  padding-left: 175px;
+}
+
+.banner__social li {
+  padding: 10px;
 }
 
 .banner__social a {
   font-family: $font-roboto;
+  text-transform: uppercase;
   font-size: 12px;
   line-height: 14px;
   color: $white;
-  margin: 5px;
 
   &:hover {
     color: $black;
+  }
+}
+
+.banner__img {
+  max-width: 100%;
+  height: auto;
+  padding-left: 62px;
+}
+
+@media (max-width: $tablet-width) {
+  .banner__title {
+    padding-left: 36px;
+    padding-top: 74px;
+  }
+
+  .banner__title h2 {
+    font-size: 86px;
+    line-height: 86px;
+    padding-top: 0;
+    padding-left: 0;
+    min-width: 230px;
+  }
+
+  .banner__city {
+    font-size: 34px;
+    line-height: 41px;
+  }
+
+  .banner__content {
+    width: 100%;
+  }
+
+  .banner__subtext {
+    top: 189px;
+    left: -39px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .banner__social {
+    display: none;
+  }  
+  
+  .banner__button {
+    min-width: 183px;
+    height: 57px;
+    margin-top: 43px;
+    margin-left: 94px;
+  }
+
+  .banner__img img {
+    width: 324px;
+    height: 390px;
+  }
+
+  .banner__img {
+    padding-left: 30px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .banner__title {
+    padding-top: 72px;
+    padding-left: 45px;
+  }
+
+  .banner__title h2 {
+    font-family: $font-bebas;
+    font-size: 78px;
+    line-height: 78px;
+    padding-top: 8px;
+    padding-left: 2px;
+    margin: 0;
+    width: 100%;
+  }  
+
+  .banner__city {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .banner__subtext {
+    top: 178px;
+  }
+  
+  .banner__button {
+    min-width: 284px;
+    height: 53px;
+    margin: 45px -8px;
+
+    @media (min-width: 508px) {
+      margin-top: 125px;
+    }
+  }
+
+  .banner__img img {
+    width: 324px;
+    height: 390px;
+  }
+
+  .banner__img {
+    display: none;
   }
 }

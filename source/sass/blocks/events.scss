@@ -1,3 +1,8 @@
+.events {
+  padding-top: 124px;
+  min-height: 500px;
+}
+
 .events-container {
   display: flex;
   flex-direction: row;
@@ -5,17 +10,31 @@
 
 .events__main {
   background-color: $red;
+  width: 43%;
+  box-sizing: border-box;
+  padding-left: 79px;
+}
+
+.events__header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  min-height: 260px;
 }
 
 .events__header h2 {
   font-family: $font-bebas;
+  width: 201px;
   color: $white;
   font-size: 90px;
   line-height: 90px;
   letter-spacing: 0.03em;
+  margin-bottom: 0;
 }
 
 .events__timetable {
+  padding-top: 69px;
+  padding-left: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -29,7 +48,26 @@
   font-size: 18px;
   line-height: 150%;
 }
-  
+
+.events h3 {
+  margin: 0;
+}
+
+.events-date__time p {
+  border-bottom: 1px solid $white;
+  box-sizing: border-box;
+  padding-bottom: 3px;
+  width: 88px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.events-date p {
+  width: 64px;
+  border-bottom: 1px solid $white;
+  margin-bottom: 0;
+  margin-top: 0;
+}
 
 .events-date__number span,
 .events-date__time span {
@@ -38,6 +76,22 @@
   font-family: $font-roboto;
   font-size: 40px;
   line-height: 150%;
+}
+
+.events-date__number {
+  display: flex;
+  flex-direction: row;
+}
+
+.events-date__month {
+  padding-top: 7px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.events-date__time {
+  padding-top: 7px;
 }
 
 .events-date__month span {
@@ -49,15 +103,21 @@
 }
 
 .events__button {
+  margin-top: 49px;
+  padding-top: 25px;
   font-family: $font-roboto;
+  font-size: 12px;
+  line-height: 14px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-decoration: none;
   background-color: transparent;
+  box-sizing: border-box;
   border: 0;
+  width: 343px;
+  height: 67px;
   outline: 4px solid $white;
   color: $white;
-  padding: 25px 102px;
   display: block;
   text-align: center;
   
@@ -66,3 +126,102 @@
     color: $black;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .events {
+    padding-top: 100px;
+    min-height: 300px;
+  }
+
+  .events__main {
+    padding-left: 46px;
+    height: 292px;
+  }
+
+  .events__header {
+    min-height: 142px;
+  }
+
+  .events__header h2 {
+    width: 145px;
+    font-size: 52px;
+    line-height: 52px;
+  }
+
+  .events__timetable {
+    padding-top: 39px;
+    padding-left: 0;
+  }
+
+  .events-date p,
+  .events-date__time p,
+  .events h3 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .events-date__number span,
+  .events-date__time span {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .events-date__month span {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .events-date__month {
+    padding-top: 0;
+  }
+
+  .events-date__time {
+    padding-top: 0;
+  }
+
+  .events-date p {
+    width: 42px;
+  }
+
+  .events-date__time p {
+    width: 56px;
+    padding-bottom: 0;
+  }
+
+  .events__button {
+    margin-top: 27px;
+    padding-top: 14px;
+    font-size: 10px;
+    line-height: 12px;
+    width: 202px;
+    height: 39px;
+  }
+
+  .events img {
+    width: 386px;
+    height: 292px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .events {
+    padding-top: 46px;
+    min-height: 300px;
+  }
+
+  .events-container {
+    flex-direction: column;
+  }
+
+  .events__main {
+    width: 100%;
+    padding-left: 46px;
+    height: 292px;
+  }
+
+  .events img {
+    width: 100%;
+    height: 292px;
+  }
+}
+  

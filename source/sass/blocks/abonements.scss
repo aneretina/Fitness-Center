@@ -1,15 +1,48 @@
+.abonements {
+  background-color: $grey-1;
+  padding-top: 123px;
+  position: relative;
+  min-height: 727px;
+  z-index: -1;
+
+  &::after {
+    content: url("../img/abo-bg.png");
+    width: 287px;
+    height: 494px;
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.abonements__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .abonements h2 {
+  text-align: center;
   font-family: $font-bebas;
   font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;
   color: $blue;
+  margin: 0;
 }
 
 .abonements__duration {
+  width: 30%;
+  justify-content: space-between;
+  border-bottom: 2px solid #dedfe2;
   list-style: none;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin-top: 33px;
 }
 
 .abonements__duration li {
@@ -17,32 +50,95 @@
   font-size: 20px;
   line-height: 150%;
   color: $blue;
+  padding-bottom: 9px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
 
   &:hover {
-    opacity: 0.5;
+    color: $blue;
+    border-bottom: 2px solid #d10a42;
+    padding-bottom: 10px;
+  }
+
+  &:focus {
+    color: $blue;
+    border: none;
+    border-bottom: 2px solid #d10a42;
+    padding-bottom: 10px;
   }
 }
 
 .abonements__list {
   list-style: none;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
+  width: 100%;
+  min-height: 448px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.abonements__item {
+  text-align: center;
+  display: flex;
+  padding-top: 51px;
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 360px;
+  background-color: $white;
+  cursor: pointer;
+  border: 8px solid transparent;
+  margin-bottom: 15px;
+
+  &:hover {
+    color: $blue;
+    border-bottom: 2px solid #d10a42;
+    padding-bottom: 10px;
+  }
+
+  &:focus {
+    color: $blue;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #d10a42;
+    padding-bottom: 10px;
+  }
 }
 
 .abonements__item h3 {
+  text-align: center;
   font-family: $font-roboto;
   color: $blue;
   font-weight: 700;
   font-size: 26px;
   line-height: 40px;
+  margin: 0;
 }
 
 .abonements__price {
+  position: relative;
+  z-index: 1;
   font-family: $font-roboto;
   color: $blue-1;
   font-weight: 700;
   font-size: 60px;
   line-height: 150%;
+  margin-top: 63px;
+  margin-bottom: 38px;
+}
+
+.abonements__price span {
+  font-family: $font-roboto;
+  font-size: 100px;
+  line-height: 150%;
+  color: $grey-2;
+  position: absolute;
+  z-index: -1;
+  top: -48px;
+  left: 70px;
 }
 
 .abonements__options {
@@ -51,4 +147,139 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  margin-top: 5px;
+}
+
+.abonements__button {
+  font-family: $font-roboto;
+  color: $blue;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  padding-top: 22px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-align: center;
+  outline: 2px solid $blue;
+  width: 206px;
+  height: 64px;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $white;
+    background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+    outline: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .abonements {
+    min-height: 1584px;
+    padding-top: 105px;
+    padding-bottom: 40px;
+  
+    &::after {
+      width: 289px;
+      height: 345px;
+      bottom: -25px;
+      right: 60px;
+    }
+  }
+
+  .abonements h2 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .abonements__duration {
+    width: 49%;
+    margin-top: 28px;
+  }
+
+  .abonements__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 119px;
+  }
+
+  .abonements__item {
+    width: 100%;
+    height: 452px;
+    margin-bottom: 40px;
+  }
+
+  .abonements__price span {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .abonements {
+    min-height: 1400px;
+    padding-top: 72px;
+    padding-bottom: 40px;
+  
+    &::after {
+      display: none; 
+    }
+  }
+
+  .abonements h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .abonements__duration {
+    width: 290px;
+    margin-top: 23px;
+  }
+
+  .abonements__duration li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .abonements__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .abonements__item {
+    width: 100%;
+    height: 384px;
+    margin-bottom: 35px;
+    padding-top: 41px;
+  }
+
+  .abonements__item h3 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .abonements__price span {
+    left: 114px;
+  }
+
+  .abonements__price {
+    font-size: 48px;
+    line-height: 72px;
+    margin-top: 57px;
+    margin-bottom: 31px;
+  }
+  
+  .abonements__price span {
+    transform: translateX(-50%);
+    font-size: 80px;
+    line-height: 120px;
+    top: -44px;
+    left: 50%;
+  }
 }

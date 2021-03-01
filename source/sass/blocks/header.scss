@@ -4,6 +4,7 @@
   background: url("../img/main-bg.jpg") no-repeat center;
   background-size: cover;
   background-color: red;
+  min-height: 658px;
 }
 
 .header__nav {
@@ -19,11 +20,44 @@
   font-size: 26px;
   line-height: 26px; 
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  text-align: left;
+  letter-spacing: 0.04em;
   color: $white; 
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    min-height: 553px;
+  }
+
+  .header__nav {
+    padding-top: 40px;
+  }
+
+  .header__nav-item {
+    font-size: 24px;
+    line-height: 24px; 
+  }
 }
 
 
+@media (max-width: $mobile-width) {
+  .header {
+    min-height: 490px;
+  }
 
+  .header__nav {
+    padding-top: 20px;
+  }
 
+  .header__nav-item {
+    font-size: 20px;
+    line-height: 20px; 
+  }
+}
+  
   
