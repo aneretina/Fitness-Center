@@ -1,5 +1,5 @@
 .promotions {
-  padding-top: 102px;
+  padding-top: 111px;
   padding-bottom: 118px;
 }
 
@@ -19,7 +19,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .promotions__main {
@@ -82,7 +81,8 @@
   border-bottom: 1px solid $white;
 
   &:hover {
-    opacity: 0.5;
+    color: $blue;
+    border-bottom: 1px solid $blue;
   }
 }
 
@@ -139,9 +139,10 @@
   border-bottom: 1px solid $blue-3;
   width: 68px;
   
-    &:hover {
-      opacity: 0.5;
-    }
+  &:hover {
+    color: $red;
+    border-bottom: 1px solid $red;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -158,10 +159,12 @@
 
   .promotions__wrapper {
     padding-top: 42px;
+    flex-wrap: wrap;
   }
 
   .promotions__main {
     min-height: 299px;
+    padding-bottom: 40px;
     width: 100%;
     background-size: 399px 462px;
     background-image: url("../img/promotions-tablet@1x.jpg");
@@ -172,7 +175,8 @@
   }
 
   .promotions-offers {
-    min-width: 678px;
+    width: 100%;
+    justify-content: space-between;
     margin-top: 30px;
     min-height: 211px;
     flex-direction: row;
@@ -197,6 +201,7 @@
   .promotions {
     min-height: 1100px;
     padding-top: 44px;
+    padding-bottom: 41px;
   }
 
   .promotions h2 {
@@ -205,6 +210,8 @@
   }
 
   .promotions__wrapper {
+    width: 100%;
+    max-height: 100%;
     padding-top: 42px;
     flex-wrap: wrap;
   }
@@ -218,12 +225,20 @@
     padding-left: 0;
   }
 
+  .promotions__button {
+    margin-top: 35px;
+  }
+
   .promotions__main {
-    min-height: 598px;
-    width: 100%;
-    background-size: 290px 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 601px;
+    padding-bottom: 0;
+    min-width: 100%;
+    background-size: 100% 290px;
     background-image: url("../img/promotions-mobile@1x.jpg");
-    background-position: top 300px left 0;
+    background-position: top 310px left 50%;
   
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/promotions-mobile@2x.jpg");
@@ -240,33 +255,39 @@
 
   .promotions-offers {
     min-width: 100%;
+    min-height: 0%;
     margin-top: 36px;
     flex-direction: column;
   }
 
   .promotions-offers__item {
     min-width: 0;
-    width: 100%;
-    min-height: 194px;
+    width: 96%;
+    height: 199px;
     margin-bottom: 25px;
   }
 
   .promotions-offers__item-text {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    padding-top: 23px;
+    padding-top: 26px;
     padding-left: 0;
   }
   
+  .promotions-offers__item-text p {
+    text-align: center;
+    width: 160px;
+  }
 
   .promotions-offers__item--1 p {
-    padding-right: 56px;
+    padding-right: 0;
   }
 
   .promotions-offers__item--1 a {
-    margin-top: 48px;
+    margin-top: 30px;
   }
 }  
 

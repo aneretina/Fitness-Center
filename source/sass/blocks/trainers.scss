@@ -3,6 +3,11 @@
   padding-bottom: 96px;
 }
 
+.trainers__wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .trainers h2 {
   font-family: $font-bebas;
   color: $blue;
@@ -22,16 +27,46 @@
   justify-content: space-between;
 }
 
-.trainers__item {
-  position: relative;
-  padding-right: 40px;
+.trainers__button-left {
+  max-width: 1200px;
+  height: 38px;
+  position: absolute;
+  left: -5.5%;
+  top: 42.5%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
+  fill: none;
+
+  @media (max-width: 1300px) {
+    left: -3%;
+  }
 }
 
-.trainers__info {
-  display: none;
+.trainers__button-right {
+  height: 38px;
+  position: absolute;
+  right: -5.5%;
+  top: 43%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
+  fill: none;
+
+  @media (max-width: 1300px) {
+    right: -3%;
+  }
 }
+
 
 .trainers__item h3 {
+  display: block;
   margin: 0;
   font-family: $font-roboto;
   font-weight: 700;
@@ -43,6 +78,63 @@
   left: -20px;
   text-align: center;
   color: $white;
+}
+
+.trainers__item {
+  position: relative;
+
+ &:hover .trainers__info {
+      display: block;
+    }
+
+    +.trainers__item h3 {
+      display: none;
+    }
+}
+
+.trainers__info {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(16, 38, 84, 0.89);
+  color: $white;
+  font-family: $font-roboto;
+ 
+  & h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0;
+  }
+
+  & span {
+    font-weight: 400;
+    color: #B6BDCC;
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 105px;
+  }
+
+  & ul {
+    list-style: outside;
+    padding-top: 36px;
+    padding-left: 72px;
+  }
+
+  & li {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 13px;
+    box-sizing: border-box;
+    padding-right: 10px;
+  }
+
 }
 
 .trainers__button {
@@ -61,20 +153,38 @@
     text-align: center;
   }
 
+
+.trainers__button-left {
+  height: 32px;
+  left: 39px;
+  top: 53.5%;
+}
+
+.trainers__button-right {
+  height: 32px;
+  right: 41px;
+  top: 55%;
+}
+
   .trainers img {
     width: 268px;
     height: 294px;
   }
 
   .trainers__list {
-    margin-top: 41px;
+    width: 100%;
+    max-width: 566px;
+    padding-top: 41px;
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden;
   }
 }
   
 @media (max-width: $mobile-width) {
   .trainers {
     padding-top: 64px;
-    padding-bottom: 54px;
+    padding-bottom: 67px;
   }
  
   .trainers h2 {

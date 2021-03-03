@@ -46,7 +46,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  width: 190px;
+  min-width: 190px;
   color: $white;
   background-color: transparent;
   border: none;
@@ -59,11 +59,25 @@
   &::placeholder {
     color: $white;
   }
+
+  &:hover,
+  &:focus {
+    border: solid 1px $grey-1;
+    color: $white;
+  }
+
+  &:active {
+    border: solid 2px $grey-1;
+  }
 }
 
 .footer__form-button {
   cursor: pointer;
   letter-spacing: 0.05em;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $font-roboto;
   padding: 15px 40px;
   background-color: transparent;
   box-sizing: border-box;
@@ -72,6 +86,11 @@
   box-shadow: none;
   margin-top: 33px;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
 }
 
 .footer__contacts {
@@ -85,21 +104,27 @@
   box-sizing: border-box;
   padding-left: 123px;
   padding-top: 65px;
+  padding-right: 160px;
 }
 
 .footer__contacts-content {
+  position: relative;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   font-family: $font-roboto;
   padding-top: 32px;
-}
 
-.footer__contacts-item {
-  width: 50%;
-}
-
-.footer__contacts-item--col2 {
-  padding-left: 21px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 102px;
+    background-color: #74819c;
+    left: 57.9%;
+    top: 35px;
+  }
 }
 
 .footer__contact {
@@ -107,6 +132,7 @@
 }
 
 .footer__contact h3 {
+  font-family: $font-roboto;
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
@@ -115,12 +141,23 @@
 
 .footer__contact p,
 .footer__contact a {
+  font-family: $font-roboto;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-decoration: none;
   margin: 0;
   color: $blue;
+}
+
+.footer__contact a {
+  margin: 0;
+  color: $blue;
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
 }
 
 .footer__nav {
@@ -161,9 +198,15 @@
 .footer__pages a {
   color: $white;
   text-decoration: none;
+  letter-spacing: 0.1em;
   font-size: 14px;
   line-height: 16px;
   font-family: $font-roboto;
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
 }
 
 .footer__social {
@@ -171,6 +214,11 @@
   flex-direction: row;
   justify-content: space-between;
   min-width: 109px;
+  flex-wrap: wrap;
+}
+
+.footer__social a:hover {
+  opacity: 0.5;
 }
 
 @media (max-width: $tablet-width) {
@@ -184,8 +232,11 @@
   }
 
   .footer__consulting-wrapper {
-    padding-left: 132px;
-    padding-top: 75px;
+    min-width: 768px;
+    padding-top: 71px;
+    padding-left: 134px;
+    padding-right: 163px;
+    margin: 0 auto;
   }
 
   .footer__consulting h2,
@@ -196,17 +247,22 @@
   }
 
   .footer__form {
-    width: 472px;
+    min-width: 100%;
+    width: 100%;
     padding-top: 20px;
   }
 
   .footer__form input {
-    width: 206px;
-    padding: 10px 0;
+    width: 45%;
+    padding-top: 15px;
+  }
+
+  .footer__form input[type="tel"] {
+    margin-left: 10px;
   }
 
   .footer__form-button {
-    margin-top: 27px;
+    margin-top: 31px;
   }
 
   .footer__contacts {
@@ -217,16 +273,24 @@
   .footer__contacts-wrapper {
     padding-left: 132px;
     padding-top: 68px;
+    padding-right: 179px;
   }
 
   .footer__contacts-content {
-    flex-direction: column;
+    flex-direction: row;
     padding-top: 37px;
+
+    &::before {
+      content: "";
+      height: 129px;
+      left: 57.9%;
+      top: 40px;
+    }
   }
 
   .footer__contact h3 {
     font-size: 18px;
-    line-height: 30px;
+    line-height: 31px;
   }
 
   .footer__contact p,
@@ -260,7 +324,8 @@
 
   .footer__consulting-wrapper {
     min-width: 290px;
-    padding-left: 13px;
+    padding-left: 14px;
+    padding-right: 14px;
     padding-top: 72px;
   }
 
@@ -299,12 +364,18 @@
   }
 
   .footer__contacts-wrapper {
-    padding-left: 14px;;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 68px;
   }
 
   .footer__contacts-content {
+    flex-direction: column;
     padding-top: 37px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .footer__contact h3 {
@@ -354,7 +425,7 @@
   }
   
   .footer__pages li {
-    padding-right: 86px;
+    padding-right: 72px;
     padding-bottom: 21px;
   }
 

@@ -3,7 +3,6 @@
   padding-top: 123px;
   position: relative;
   min-height: 727px;
-  z-index: -1;
 
   &::after {
     content: url("../img/abo-bg.png");
@@ -12,7 +11,7 @@
     position: absolute;
     bottom: -150px;
     right: 0;
-    z-index: -1;
+    z-index: 1;
   }
 }
 
@@ -20,8 +19,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
-
 
 .abonements h2 {
   text-align: center;
@@ -39,33 +38,34 @@
   border-bottom: 2px solid #dedfe2;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   padding: 0;
   margin-top: 33px;
 }
 
-.abonements__duration li {
+.abonements__duration-item {
   font-family: $font-roboto;
   font-size: 20px;
   line-height: 150%;
-  color: $blue;
+  color: rgba(16, 38, 84, 0.5);
   padding-bottom: 9px;
   cursor: pointer;
   border-bottom: 2px solid transparent;
 
-  &:hover {
-    color: $blue;
-    border-bottom: 2px solid #d10a42;
-    padding-bottom: 10px;
-  }
-
+  &:hover,
   &:focus {
     color: $blue;
-    border: none;
     border-bottom: 2px solid #d10a42;
     padding-bottom: 10px;
   }
+}
+
+.active {
+  color: $blue;
+  border-bottom: 2px solid #d10a42;
+  padding-bottom: 10px;
 }
 
 .abonements__list {
@@ -74,10 +74,19 @@
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
-  min-height: 448px;
+  min-height: 450px;
   flex-wrap: wrap;
   padding: 0;
   margin-top: 20px;
+  z-index: 3;
+}
+
+.abonements-hidden {
+  display: none;
+}
+
+.abonements-show {
+  display: flex;
 }
 
 .abonements__item {
@@ -88,23 +97,25 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 360px;
+  min-height: 360px;
   background-color: $white;
   cursor: pointer;
   border: 8px solid transparent;
   margin-bottom: 15px;
+  cursor: pointer;
 
   &:hover {
-    color: $blue;
-    border-bottom: 2px solid #d10a42;
-    padding-bottom: 10px;
+    padding-top: 53px;
+    border: 8px solid transparent;
+    border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+    border-image-slice: 1;
   }
 
   &:focus {
-    color: $blue;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #d10a42;
-    padding-bottom: 10px;
+    padding-top: 53px;
+    border: 8px solid transparent;
+    border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+    border-image-slice: 1;
   }
 }
 
@@ -182,6 +193,7 @@
     padding-bottom: 40px;
   
     &::after {
+      content: url("../img/abo-bg-tablet.png");
       width: 289px;
       height: 345px;
       bottom: -25px;
@@ -240,7 +252,7 @@
     margin-top: 23px;
   }
 
-  .abonements__duration li {
+  .abonements__duration-item {
     font-size: 16px;
     line-height: 24px;
   }
