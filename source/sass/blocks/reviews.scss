@@ -1,5 +1,18 @@
 .reviews {
-  padding-bottom: 67px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.reviews__wrapper {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
 }
 
 .reviews h2 {
@@ -31,6 +44,14 @@
   padding-top: 9px;
 }
 
+.reviews__svg-desktop {
+  display: block;
+}
+
+.reviews__svg-mobile {
+  display: none;
+}
+
 .reviews__description {
   padding-left: 31px;
   padding-right: 56px;
@@ -44,16 +65,56 @@
 }
 
 .reviews__description p {
-  padding-top: 14px;
+  padding-top: 11px;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
   margin: 0;
 }
 
+
+.reviews__button-left {
+  max-width: 1200px;
+  height: 38px;
+  position: absolute;
+  left: 0;
+  top: 45%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
+  fill: none;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $blue;
+  }
+}
+
+.reviews__button-right {
+  height: 38px;
+  position: absolute;
+  right: 0;
+  top: 45%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
+  fill: none;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $blue;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .reviews {
-    padding-bottom: 58px;
+    padding-bottom: 0;
   }
 
   .reviews h2 {
@@ -64,12 +125,21 @@
   .reviews__item {
     margin: 42px auto;
   }
+
+  .reviews__button-left {
+    left: -6px;
+    top: 43%;
+  }
+
+  .reviews__button-right {
+    right: -6px;
+    top: 43%;
+  }
 }
 
 @media (max-width: $mobile-width) {
   .reviews {
     padding-bottom: 0;
-    max-height: 480px;
   }
 
   .reviews h2 {
@@ -116,5 +186,22 @@
     padding-top: 18px;
     width: 176px;
   }
+
+  .reviews__svg-desktop {
+    display: none;
+  } 
+
+  .reviews__svg-mobile {
+    display: block;
+  }
+
+  .reviews__button-left {
+    left: 9px;
+    top: 45%;
+  }
+
+  .reviews__button-right {
+    right: 9px;
+    top: 45%;
+  }
 }
-  

@@ -14,7 +14,7 @@
 }
 
 .banner__title {
-  color: $white; 
+  color: $white;
   text-transform: uppercase;
   text-align: right;
   margin: 0;
@@ -48,7 +48,8 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  color: $white; 
+  color: $white;
+  padding-bottom: 20px;
 }
 
 .banner__button {
@@ -69,13 +70,13 @@
   color: $white;
   margin-top: 56px;
   margin-left: 120px;
-  
+
   &:hover {
     background-color: $white;
     color: $black;
   }
 }
-  
+
 .banner__social {
   display: flex;
   flex-direction: column;
@@ -87,6 +88,10 @@
   color: $white;
   padding-bottom: 27px;
   padding-left: 175px;
+
+  @media (max-width: 1220px) {
+    padding-left: 150px;
+  }
 }
 
 .banner__social li {
@@ -113,8 +118,8 @@
 
 @media (max-width: $tablet-width) {
   .banner__title {
-    padding-left: 36px;
-    padding-top: 74px;
+    padding-left: 38px;
+    padding-top: 72px;
   }
 
   .banner__title h2 {
@@ -143,8 +148,8 @@
 
   .banner__social {
     display: none;
-  }  
-  
+  }
+
   .banner__button {
     min-width: 183px;
     height: 57px;
@@ -177,7 +182,7 @@
     padding-left: 2px;
     margin: 0;
     width: 100%;
-  }  
+  }
 
   .banner__city {
     font-size: 28px;
@@ -187,7 +192,7 @@
   .banner__subtext {
     top: 178px;
   }
-  
+
   .banner__button {
     min-width: 284px;
     height: 53px;

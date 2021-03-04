@@ -2,6 +2,7 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
+  padding-top: 117px;
   min-height: 596px;
 }
 
@@ -11,7 +12,7 @@
   position: relative;
 }
 
-.gym__video  {
+.gym__video {
   position: absolute;
   left: 481px;
   top: 289px;
@@ -95,7 +96,7 @@
     text-align: center;
     margin: 0 auto;
     font-size: 42px;
-    line-height: 42px
+    line-height: 42px;
   }
 
   .gym__description h3 {
@@ -118,7 +119,7 @@
 
   .gym__img img {
     width: 100%;
-    min-height: 315px;
+    height: 345px;
   }
 
   .gym__video img {
@@ -127,7 +128,7 @@
   }
 
   .gym__video {
-    left: 255px;
+    left: 231px;
     top: 538px;
     margin: 0 auto;
   }

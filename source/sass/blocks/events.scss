@@ -12,6 +12,7 @@
   background-color: $red;
   width: 43%;
   padding-left: 79px;
+  max-height: 500px;
 }
 
 .events__img {
@@ -43,7 +44,7 @@
 }
 
 .events-date p,
-.events-date__time p,
+.events-time p,
 .events h3 {
   font-family: $font-roboto;
   color: $white;
@@ -56,7 +57,7 @@
   margin: 0;
 }
 
-.events-date__time p {
+.events-time p {
   border-bottom: 1px solid $white;
   box-sizing: border-box;
   padding-bottom: 3px;
@@ -73,7 +74,7 @@
 }
 
 .events-date__number span,
-.events-date__time span {
+.events-time span {
   font-weight: 700;
   color: $white;
   font-family: $font-roboto;
@@ -93,7 +94,7 @@
   flex-direction: column;
 }
 
-.events-date__time {
+.events-time {
   padding-top: 7px;
 }
 
@@ -123,7 +124,7 @@
   color: $white;
   display: block;
   text-align: center;
-  
+
   &:hover {
     background-color: $white;
     color: $black;
@@ -132,7 +133,7 @@
 
 @media (max-width: $tablet-width) {
   .events {
-    padding-top: 100px;
+    padding-top: 103px;
     min-height: 300px;
   }
 
@@ -142,6 +143,8 @@
 
   .events__main {
     padding-left: 46px;
+    width: 36%;
+    max-height: 292px;
   }
 
   .events__header {
@@ -151,7 +154,7 @@
   .events__header h2 {
     width: 145px;
     font-size: 52px;
-    line-height: 52px;
+    line-height: 54px;
     margin-top: 40px;
   }
 
@@ -161,7 +164,7 @@
   }
 
   .events-date p,
-  .events-date__time p {
+  .events-time p {
     font-size: 12px;
     line-height: 17px;
   }
@@ -170,9 +173,9 @@
     font-size: 12px;
     line-height: 12px;
   }
-  
+
   .events-date__number span,
-  .events-date__time span {
+  .events-time span {
     font-size: 24px;
     line-height: 34px;
   }
@@ -187,7 +190,7 @@
     padding-left: 2px;
   }
 
-  .events-date__time {
+  .events-time {
     padding-top: 0;
   }
 
@@ -195,7 +198,7 @@
     width: 42px;
   }
 
-  .events-date__time p {
+  .events-time p {
     width: 56px;
     padding-bottom: 0;
   }
@@ -217,7 +220,7 @@
 
 @media (max-width: $mobile-width) {
   .events {
-    padding-top: 46px;
+    padding-top: 40px;
     min-height: 300px;
   }
 
@@ -249,4 +252,3 @@
     height: 292px;
   }
 }
-  

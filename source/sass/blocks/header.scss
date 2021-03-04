@@ -4,8 +4,8 @@
   background: url("../img/main-bg.jpg") no-repeat center;
   background-size: cover;
   background-color: red;
-  min-height: 658px;
-  padding-bottom: 117px;
+  min-height: 650px;
+  padding-bottom: 10px;
 }
 
 .header__nav {
@@ -19,11 +19,11 @@
   font-family: $font-bebas;
   font-weight: 400;
   font-size: 26px;
-  line-height: 26px; 
+  line-height: 26px;
   text-transform: uppercase;
   text-align: left;
   letter-spacing: 0.04em;
-  color: $white; 
+  color: $white;
 }
 
 .header__nav-item--tel:hover {
@@ -32,7 +32,8 @@
 
 @media (max-width: $tablet-width) {
   .header {
-    min-height: 553px;
+    min-height: 455px;
+    padding-bottom: 76px;
   }
 
   .header__nav {
@@ -41,14 +42,14 @@
 
   .header__nav-item {
     font-size: 24px;
-    line-height: 24px; 
+    line-height: 24px;
   }
 }
 
-
 @media (max-width: $mobile-width) {
   .header {
-    min-height: 490px;
+    min-height: 420px;
+    padding-bottom: 38px;
   }
 
   .header__nav {
@@ -57,8 +58,6 @@
 
   .header__nav-item {
     font-size: 20px;
-    line-height: 20px; 
+    line-height: 20px;
   }
 }
-  
-  
