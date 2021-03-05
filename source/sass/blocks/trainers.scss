@@ -1,6 +1,6 @@
 .trainers {
   padding-top: 115px;
-  padding-bottom: 96px;
+  padding-bottom: 99px;
 }
 
 .trainers__wrapper {
@@ -92,7 +92,7 @@
   line-height: 150%;
   width: 100%;
   position: absolute;
-  top: 242px;
+  top: 244px;
   left: 0;
   text-align: center;
   color: $white;
@@ -199,7 +199,7 @@
   .trainers__svg-desktop {
     display: block;
   }
-  
+
   .trainers__svg-mobile {
     display: none;
   }
@@ -207,7 +207,7 @@
 
 @media (max-width: $mobile-width) {
   .trainers {
-    padding-top: 67px;
+    padding-top: 56px;
     padding-bottom: 67px;
   }
 
@@ -229,7 +229,7 @@
   .trainers__svg-desktop {
     display: none;
   }
-  
+
   .trainers__svg-mobile {
     display: block;
   }

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Фитнес Центр "Supergym"</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/bebas-neue-regular.woff2" as="font" type="font/woff2">
@@ -31,7 +32,7 @@
         <a class="header__nav-item header__nav-item--tel" href="tel:88005555555">8-800-555-55-55</a>
       </nav>
       <div class="banner">
-        <div class="container banner__container">
+        <div class="container">
           <div class="banner__wrapper">
             <div class="banner__content">
               <div class="banner__title">
@@ -141,7 +142,7 @@
                   </svg>
                   <span>5000</span>
                 </p>
-                <a class="abonements__button" href="#">купить абонемент</a>
+                <a class="abonements__button" href="abonements.html">купить абонемент</a>
               </div>
             </li>
             <li class="abonements__item">
@@ -265,7 +266,6 @@
       </section>
       <section class="events">
         <div class="container">
-          <div class="events-content">
             <div class="events__main">
               <div class="events__header">
                 <h2>Super games</h2>
@@ -287,25 +287,8 @@
                 </div>
               </div>
               <h3>Ежегодные соревнования по CrossFit</h3>
-              <a href="#" class="events__button">заполнить заявку</a>
+              <a href="feedback.html" class="events__button">заполнить заявку</a>
             </div>
-            <div class="events__img">
-              <picture>
-                <!-- 1x: 290px; 2x 580px-->
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/crossfit-mobile@1x.webp 1x, img/crossfit-mobile@2x.webp 2x">
-                <!-- 1x: 386px; 2x 772px-->
-                <source type="image/webp" media="(max-width: 1199px)" srcset="img/crossfit-tablet@1x.webp 1x, img/crossfit-tablet@2x.webp 2x">
-                <!-- 1x: 660px; 2x 1320px-->
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/crossfit-desktop@1x.webp 1x, img/crossfit-desktop@1x.webp 2x">
-                <!-- 1x: 290px; 2x 580px-->
-                <source media="(max-width: 767px)" srcset="img/crossfit-mobile@1x.jpg 1x, img/crossfit-mobile@2x.jpg 2x">
-                <!-- 1x: 386px; 2x 772px-->
-                <source media="(max-width: 1199px)" srcset="img/crossfit-tablet@1x.jpg 1x, img/crossfit-tablet@2x.jpg 2x">
-                <!-- 1x: 660px; 2x 1320px-->
-                <img src="img/crossfit-desktop@1x.jpg" width="660" height="500" srcset="img/crossfit-desktop@2x.jpg" alt="Кроссфит">
-              </picture>
-            </div>
-          </div>
         </div>
       </section>
       <section class="trainers">
@@ -638,25 +621,6 @@
               </picture>
               <div class="reviews__description">
                 <h3>Анна Орлова</h3>
-                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда
-                  чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный,
-                  даже в вечернее время нет очередей»
-                </p>
-              </div>
-            </div>
-            <div class="reviews__item">
-              <picture>
-                <!-- 1x: 68px; 2x 136px-->
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/review-mobile@1x.webp 1x, img/review-mobile@2x.webp 2x">
-                <!-- 1x: 80px; 2x 160px-->
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/review-desktop@1x.webp 1x, img/review-desktop@2x.webp 2x">
-                <!-- 1x: 68px; 2x 136px-->
-                <source media="(max-width: 767px)" srcset="img/review-mobile@1x.png 1x, img/review-mobile@2x.png 2x">
-                <!-- 1x: 80px; 2x 160px-->
-                <img src="img/review-desktop@1x.png" width="80" height="80" srcset="img/review-desktop@2x.png" alt="Анна Орлова">
-              </picture>
-              <div class="reviews__description">
-                <h3>Виктория Орлова</h3>
                 <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда
                   чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный,
                   даже в вечернее время нет очередей»

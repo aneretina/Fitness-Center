@@ -2,21 +2,21 @@
   padding-top: 124px;
 }
 
-.events-content {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
 .events__main {
   background-color: $red;
-  width: 43%;
+  width: 100%;
   padding-left: 79px;
-  max-height: 500px;
-}
+  min-height: 500px;
+  box-sizing: border-box;
 
-.events__img {
-  width: 57%;
+  background-image: url("../img/crossfit-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 660px 500px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/crossfit-desktop@2x.jpg");
+  }
 }
 
 .events__header {
@@ -41,6 +41,7 @@
   padding-left: 50px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .events-date p,
@@ -137,14 +138,18 @@
     min-height: 300px;
   }
 
-  .events-content {
-    width: 100%;
-  }
-
   .events__main {
     padding-left: 46px;
-    width: 36%;
-    max-height: 292px;
+    width: 100%;
+    min-height: 292px;
+    background-image: url("../img/crossfit-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 386px 292px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/crossfit-tablet@2x.jpg");
+    }
   }
 
   .events__header {
@@ -211,21 +216,12 @@
     width: 198px;
     height: 39px;
   }
-
-  .events img {
-    width: 100%;
-    height: 292px;
-  }
 }
 
 @media (max-width: $mobile-width) {
   .events {
-    padding-top: 40px;
-    min-height: 300px;
-  }
-
-  .events-content {
-    flex-direction: column;
+    padding-top: 71px;
+    min-height: 600px;
   }
 
   .events__timetable {
@@ -239,8 +235,18 @@
   .events__main {
     width: 100%;
     padding-left: 46px;
-    min-height: 292px;
+    height: 100%;
+    min-height: 586px;
     box-sizing: border-box;
+
+    background-image: url("../img/crossfit-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom 0 left 50%;
+    background-size: 290px 50%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/crossfit-mobile@2x.jpg");
+    }
   }
 
   .events__img {

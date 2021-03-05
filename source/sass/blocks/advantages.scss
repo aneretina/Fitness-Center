@@ -206,7 +206,7 @@
 
 @media (max-width: $mobile-width) {
   .advantages {
-    padding-bottom: 23px;
+    padding-bottom: 19px;
   }
 
   .advantages h2 {
@@ -287,6 +287,7 @@
   }
 
   .advantages__number span {
-    padding-top: 7px;
+    padding-top: 3px;
+    padding-left: 0;
   }
 }

@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 68px;
+  padding-top: 67px;
 }
 
 .footer__wrapper {
@@ -212,7 +212,7 @@
 
   &:hover,
   &:focus {
-    color: $red;
+    opacity: 0.5;
   }
 }
 
@@ -334,7 +334,6 @@
   .footer__social {
     min-width: 14.5%;
   }
-  
 }
 
 @media (max-width: $mobile-width) {
@@ -400,7 +399,7 @@
 
   .footer__contacts-content {
     flex-direction: column;
-    padding-top: 37px;
+    padding-top: 35px;
 
     &::before {
       display: none;
@@ -410,6 +409,7 @@
   .footer__contact h3 {
     font-size: 18px;
     line-height: 30px;
+    letter-spacing: 1px;
   }
 
   .footer__contact p,
