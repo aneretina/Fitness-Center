@@ -121,7 +121,6 @@
   function changeReviewsSlides(step, slides) {
     currentIndexReviews = 0;
     keyIndexReviews = step;
-    stepSize = 1;
     onSlidesHandler(slides, currentIndexReviews, keyIndexReviews);
   }
 
@@ -132,7 +131,7 @@
       reviewsRight.addEventListener('click', function (evt) {
         evt.preventDefault();
         if (keyIndexReviews < reviewsItem.length) {
-          onSlidesHandler(reviewsItem, currentIndexReviews += stepSize, keyIndexReviews += stepSize);
+          onSlidesHandler(reviewsItem, currentIndexReviews += 1, keyIndexReviews += 1);
         }
       });
     }
