@@ -148,14 +148,6 @@
     }
   }
 
-  bannerBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    abonements.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
-
   trainers.addEventListener('touchstart', handleTouchStart, false);
   trainers.addEventListener('touchmove', handleTouchMove, false);
 
@@ -193,5 +185,13 @@
     xDown = null;
     yDown = null;
   }
+
+  bannerBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    abonements.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
 
 })();
