@@ -2,17 +2,26 @@
   padding-top: 124px;
 }
 
+.events__container {
+  display: flex;
+  flex-direction: row;
+}
+
 .events__main {
   background-color: $red;
-  width: 100%;
+  width: 43%;
   padding-left: 79px;
-  min-height: 500px;
+  min-height: 400px;
+  padding-bottom: 86px;
   box-sizing: border-box;
+}
 
+.events__img {
+  width: 57%;
   background-image: url("../img/crossfit-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-position: 100% 0;
-  background-size: 660px 500px;
+  background-size: 660px 100%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/crossfit-desktop@2x.jpg");
@@ -107,9 +116,9 @@
   line-height: 150%;
 }
 
-.events__button {
+.events__main a {
   margin-top: 49px;
-  padding-top: 25px;
+  padding: 25px;
   font-family: $font-roboto;
   font-size: 12px;
   line-height: 14px;
@@ -140,12 +149,16 @@
 
   .events__main {
     padding-left: 46px;
-    width: 100%;
+    width: 43%;
     min-height: 292px;
+    padding-bottom: 52px;
+  }
+
+  .events__img {
     background-image: url("../img/crossfit-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 100% 0;
-    background-size: 386px 292px;
+    background-size: 100% 100%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/crossfit-tablet@2x.jpg");
@@ -208,9 +221,9 @@
     padding-bottom: 0;
   }
 
-  .events__button {
+  .events__main a {
     margin-top: 33px;
-    padding-top: 14px;
+    padding: 14px;
     font-size: 10px;
     line-height: 12px;
     width: 198px;
@@ -221,6 +234,12 @@
 @media (max-width: $mobile-width) {
   .events {
     padding-top: 71px;
+    min-height: 600px;
+  }
+
+  .events__container {
+    display: flex;
+    flex-direction: column;
     min-height: 600px;
   }
 
@@ -236,28 +255,29 @@
     width: 100%;
     padding-left: 0;
     height: 100%;
-    min-height: 586px;
+    min-height: 292px;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+  }
 
+  .events__img {
+    display: block;
+    width: 100%;
+    min-height: 292px;
     background-image: url("../img/crossfit-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: bottom 0 left 50%;
-    background-size: 290px 50%;
+    background-size: 100% 100%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/crossfit-mobile@2x.jpg");
     }
   }
 
-  .events__img {
-    width: 100%;
-  }
-
-  .events img {
-    width: 100%;
-    height: 292px;
+  .events__main a {
+    margin: 30px;
   }
 }

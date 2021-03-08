@@ -22,7 +22,14 @@
 }
 
 .promotions__main {
-  min-width: 560px;
+  width: 48%;
+  display: flex;
+  flex-direction: row;
+  background-color: $red;
+}
+
+.promotions__img {
+  width: 280px;
   background-color: $red;
   background-image: url("../img/promotions-desktop@1x.jpg");
   background-repeat: no-repeat;
@@ -35,6 +42,8 @@
 }
 
 .promotions__text {
+  width: 280px;
+  box-sizing: border-box;
   padding-top: 40px;
   padding-left: 46px;
 }
@@ -67,10 +76,11 @@
   line-height: 127%;
 }
 
-.promotions__button {
+.promotions__text a {
   display: block;
   width: 79px;
   margin-top: 190px;
+  margin-bottom: 20px;
   color: $white;
   font-weight: 700;
   font-family: $font-roboto;
@@ -127,7 +137,7 @@
   padding-left: 31px;
 }
 
-.promotions-offers__button {
+.promotions-offers a {
   display: block;
   margin-top: 72px;
   color: $blue-3;
@@ -164,15 +174,28 @@
   }
 
   .promotions__main {
-    min-height: 299px;
-    padding-bottom: 44px;
+    display: flex;
+    flex-direction: row;
+    min-height: 461px;
     width: 100%;
-    background-size: 399px 462px;
+  }
+
+  .promotions__img {
+    min-width: 59%;
+    background-size: 100%;
     background-image: url("../img/promotions-tablet@1x.jpg");
+    background-position: 100% 0;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/promotions-tablet@2x.jpg");
     }
+  }
+
+  .promotions__text {
+    min-width: 41%;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-left: 46px;
   }
 
   .promotions-offers {
@@ -222,12 +245,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 290px;
+    min-height: 300px;
+    min-width: 290px;
     padding-top: 38px;
     padding-left: 0;
   }
 
-  .promotions__button {
+  .promotions__text a {
     margin-top: 32px;
   }
 
@@ -238,9 +262,14 @@
     min-height: 599px;
     padding-bottom: 0;
     min-width: 100%;
-    background-size: 290px 299px;
+  }
+
+  .promotions__img {
+    width: 100%;
+    min-height: 299px;
+    background-size: 100% 299px;
     background-image: url("../img/promotions-mobile@1x.jpg");
-    background-position: top 300px left 50%;
+    background-position: 100%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/promotions-mobile@2x.jpg");
@@ -252,14 +281,14 @@
     padding-top: 0;
   }
 
-  .promotions-offers__button {
+  .promotions-offers a {
     margin-top: 28px;
   }
 
   .promotions-offers {
     min-width: 100%;
     min-height: 0%;
-    margin-top: 31px;
+    margin-top: 29px;
     flex-direction: column;
   }
 

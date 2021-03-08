@@ -52,7 +52,7 @@
   padding-bottom: 20px;
 }
 
-.banner__button {
+.banner__content a {
   display: block;
   min-width: 230px;
   height: 57px;
@@ -150,7 +150,7 @@
     display: none;
   }
 
-  .banner__button {
+  .banner__content a {
     min-width: 183px;
     height: 57px;
     margin-top: 43px;
@@ -194,7 +194,7 @@
     top: 178px;
   }
 
-  .banner__button {
+  .banner__content a {
     min-width: 284px;
     height: 53px;
     margin: 45px -8px;

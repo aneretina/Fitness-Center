@@ -120,38 +120,38 @@
   background-color: rgba(16, 38, 84, 0.89);
   color: $white;
   font-family: $font-roboto;
+}
 
-  & h4 {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 27px;
-    text-align: center;
-    padding-top: 50px;
-    margin: 0;
-  }
+.trainers__info h4 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
+}
 
-  & span {
-    font-weight: 400;
-    color: #b6bdcc;
-    font-size: 16px;
-    line-height: 18px;
-    padding-left: 105px;
-  }
+.trainers__info span {
+  font-weight: 400;
+  color: #b6bdcc;
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 105px;
+}
 
-  & ul {
-    list-style: outside;
-    padding-top: 36px;
-    padding-left: 72px;
-  }
+.trainers__info ul {
+  list-style: outside;
+  padding-top: 36px;
+  padding-left: 72px;
+}
 
-  & li {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    margin-bottom: 13px;
-    box-sizing: border-box;
-    padding-right: 10px;
-  }
+.trainers__info li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 13px;
+  box-sizing: border-box;
+  padding-right: 10px;
 }
 
 .trainers__button {
@@ -236,11 +236,11 @@
 
   .trainers__button-left {
     left: -6px;
-    top: 52.5%;
+    top: 50.5%;
   }
 
   .trainers__button-right {
     right: -6px;
-    top: 52.5%;
+    top: 50.5%;
   }
 }

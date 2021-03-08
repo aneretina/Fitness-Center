@@ -12,7 +12,7 @@
   var reviewsLeft = document.querySelector('.reviews__button-left');
   var reviewsRight = document.querySelector('.reviews__button-right');
 
-  var bannerBtn = document.querySelector('.banner__button');
+  var bannerBtn = document.querySelector('.banner__content a');
 
   var abonements = document.querySelector('.abonements');
   var abonementsDuration = document.querySelectorAll('.abonements__duration-item');

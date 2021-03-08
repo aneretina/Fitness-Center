@@ -67,16 +67,15 @@
 
   &:hover,
   &:focus {
-    border: solid 1px $grey-1;
-    color: $white;
+    opacity: 0.5;
   }
 
   &:active {
-    border: solid 2px $grey-1;
+    border-bottom: solid 1px $red;
   }
 }
 
-.footer__form-button {
+.footer__form button {
   cursor: pointer;
   letter-spacing: 0.05em;
   font-weight: 700;
@@ -276,7 +275,7 @@
     margin-left: 10px;
   }
 
-  .footer__form-button {
+  .footer__form button {
     margin-top: 31px;
   }
 
@@ -375,7 +374,7 @@
     margin-bottom: 24px;
   }
 
-  .footer__form-button {
+  .footer__form button {
     width: 294px;
     margin-top: 13px;
     font-size: 14px;
@@ -415,7 +414,7 @@
   .footer__contact p,
   .footer__contact a {
     font-size: 18px;
-    line-height: 28px;
+    line-height: 29px;
   }
 
   .footer__contacts-item {
