@@ -29,18 +29,6 @@
   var xDown = null;
   var yDown = null;
 
-  inputTel.addEventListener('focus', function () {
-    if (!/^\+\d*$/.test(inputTel.value)) {
-      inputTel.value = '+7';
-    }
-  });
-
-  inputTel.addEventListener('keypress', function (evt) {
-    if (!/\d/.test(evt.key)) {
-      evt.preventDefault();
-    }
-  });
-
   if (abonements) {
     abonementsDuration.forEach(function (element) {
       element.addEventListener('click', function (evt) {
@@ -148,22 +136,20 @@
   }
 
   trainers.addEventListener('touchstart', handleTouchStart, false);
-  trainers.addEventListener('touchmove', handleTouchMove, false);
+  trainers.addEventListener('touchmove', handleTouchMoveTrainers, false);
 
   reviews.addEventListener('touchstart', handleTouchStart, false);
-  reviews.addEventListener('touchmove', handleTouchMove, false);
+  reviews.addEventListener('touchmove', handleTouchMoveReviews, false);
 
   function handleTouchStart(evt) {
     xDown = evt.touches[0].clientX;
     yDown = evt.touches[0].clientY;
-
   }
 
-  function handleTouchMove(evt) {
+  function handleTouchMoveTrainers(evt) {
     if (!xDown || !yDown) {
       return;
     }
-
     var xUp = evt.touches[0].clientX;
     var yUp = evt.touches[0].clientY;
 
@@ -185,6 +171,31 @@
     yDown = null;
   }
 
+  function handleTouchMoveReviews(evt) {
+    if (!xDown || !yDown) {
+      return;
+    }
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+      if (xDiff > 0) {
+        if (currentIndex > 0) {
+          onSlidesHandler(reviewsItem, currentIndex -= 1, keyIndex -= 1);
+        }
+      } else {
+        if (keyIndex < reviewsItem.length) {
+          onSlidesHandler(reviewsItem, currentIndex += 1, keyIndex += 1);
+        }
+      }
+    }
+    xDown = null;
+    yDown = null;
+  }
+
   bannerBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
     abonements.scrollIntoView({
@@ -193,4 +204,8 @@
     });
   });
 
+  /* eslint-disable no-undef */
+  /* eslint-disable new-cap */
+
+  IMask(inputTel, {mask: '+{7}(000)000-00-00'});
 })();

@@ -23,6 +23,7 @@
 
 .promotions__main {
   width: 48%;
+  margin-right: 10px;
   display: flex;
   flex-direction: row;
   background-color: $red;
@@ -112,6 +113,11 @@
   border-image-slice: 1;
 }
 
+
+.promotions-offers__item--1 {
+  margin-bottom: 20px;
+}
+
 .promotions-offers__item-text h3 {
   font-family: $font-roboto;
   font-weight: 700;
@@ -135,11 +141,13 @@
   box-sizing: border-box;
   padding-top: 18px;
   padding-left: 31px;
+  padding-right: 31px;
 }
 
 .promotions-offers a {
   display: block;
   margin-top: 72px;
+  margin-bottom: 15px;
   color: $blue-3;
   font-weight: 700;
   font-family: $font-roboto;
@@ -178,6 +186,7 @@
     flex-direction: row;
     min-height: 461px;
     width: 100%;
+    margin-right: 0;
   }
 
   .promotions__img {
@@ -295,7 +304,7 @@
   .promotions-offers__item {
     min-width: 0;
     width: 96%;
-    height: 199px;
+    min-height: 199px;
     margin-bottom: 25px;
   }
 
@@ -307,6 +316,7 @@
     box-sizing: border-box;
     padding-top: 26px;
     padding-left: 0;
+    padding-right: 0;
   }
 
   .promotions-offers__item-text p {

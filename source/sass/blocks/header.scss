@@ -26,6 +26,11 @@
   color: $white;
 }
 
+
+.header__nav-item svg {
+  fill: $white;
+}
+
 .header__nav-item--tel:hover {
   opacity: 0.5;
 }
@@ -44,6 +49,11 @@
     font-size: 24px;
     line-height: 24px;
   }
+
+  .header__nav-item svg {
+    width: 82px;
+    height: 17px;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -59,5 +69,10 @@
   .header__nav-item {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .header__nav-item svg {
+    width: 68px;
+    height: 15px;
   }
 }

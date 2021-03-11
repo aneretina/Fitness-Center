@@ -54,7 +54,10 @@
   cursor: pointer;
   border-bottom: 2px solid transparent;
 
-  &:hover,
+  &:hover {
+    color: $red;
+  }
+
   &:focus {
     color: $blue;
     border-bottom: 2px solid #d10a42;
@@ -111,7 +114,6 @@
 }
 
 .abonements__wrapper {
-  cursor: pointer;
   width: 100%;
   background-color: #ffffff;
   padding-top: 55px;
@@ -180,8 +182,14 @@
   box-sizing: border-box;
   margin: 0 auto;
   text-transform: uppercase;
+  cursor: pointer;
 
   &:hover {
+    color: $white;
+    background-color: $grey;
+  }
+
+  &:focus {
     color: $white;
     background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
     outline: 0;

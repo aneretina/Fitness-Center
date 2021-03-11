@@ -30,7 +30,7 @@
   color: $white;
   font-family: $font-roboto;
   width: 560px;
-  height: 242px;
+  min-height: 242px;
   margin: 51px auto;
   display: flex;
   flex-direction: row;
@@ -55,6 +55,7 @@
 .reviews__description {
   padding-left: 31px;
   padding-right: 56px;
+  padding-bottom: 30px;
 }
 
 .reviews__description h3 {
@@ -150,7 +151,7 @@
   .reviews__item {
     position: relative;
     width: 226px;
-    height: 335px;
+    min-height: 335px;
     margin: 42px auto;
     padding-left: 0;
     padding-top: 40px;

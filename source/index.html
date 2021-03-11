@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Сайт тренажерного зала Supergym">
     <title>Фитнес Центр "Supergym"</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/bebas-neue-regular.woff2" as="font" type="font/woff2">
@@ -16,7 +17,11 @@
     <header class="header">
       <div class="container">
       <nav class="header__nav">
-        <a class="header__nav-item">Supergym</a>
+        <a class="header__nav-item">
+            <svg width="89" height="20">
+                <use xlink:href="#icon-logo"/>
+              </svg>
+        </a>
         <a class="header__nav-item header__nav-item--tel" href="tel:88005555555">8-800-555-55-55</a>
       </nav>
       <div class="banner">
@@ -26,13 +31,13 @@
               <div class="banner__title">
                 <p class="banner__city">Омск</p>
                 <h2>Фитнес Центр</h2>
+                <a href="#">Купить абонемент</a>
               </div>
               <ul class="banner__subtext">
                 <li>Тренажёрный зал</li>
                 <li>Групповые занятия</li>
                 <li>Кардио-зона</li>
               </ul>
-              <a href="#">Купить абонемент</a>
             </div>
             <div class="banner__img">
               <picture>
@@ -66,7 +71,7 @@
     </div>
     </header>
     <main>
-      <h1 class="visually-hidden">Фитнес Центр. Supergym</h1>
+      <h1 class="visually-hidden">Supergym</h1>
       <section class="gym">
         <div class="container gym__container">
           <div class="gym__description">
@@ -92,7 +97,7 @@
             </picture>
           </div>
           <div class="gym__video">
-            <button type="button"></button>
+            <button type="button" name="button-play" tabindex="1" aria-label="Проиграть"></button>
             <picture>
               <!-- 1x: 320px; 2x 640px-->
               <source type="image/webp" media="(max-width: 767px)" srcset="img/video-gym-mobile@1x.webp 1x, img/video-gym-mobile@2x.webp 2x">
@@ -114,9 +119,9 @@
         <div class="container abonements__container">
           <h2>Абонементы</h2>
           <ul class="abonements__duration">
-            <li class="abonements__duration-item active">1 месяц</li>
-            <li class="abonements__duration-item">6 месяцев</li>
-            <li class="abonements__duration-item">12 месяцев</li>
+            <li class="abonements__duration-item active" tabindex="2">1 месяц</li>
+            <li class="abonements__duration-item" tabindex="3">6 месяцев</li>
+            <li class="abonements__duration-item" tabindex="4">12 месяцев</li>
           </ul>
           <ul class="abonements__list abonements-show">
             <li class="abonements__item">
@@ -285,7 +290,7 @@
         <div class="container trainers-container">
           <h2>Тренеры</h2>
           <div class="trainers__wrapper">
-            <button class="trainers__button-left visually-hidden" type="button">
+            <button class="trainers__button-left visually-hidden" type="button" aria-label="Назад">
               <svg class="trainers__svg-desktop" width="16" height="32">
                 <use xlink:href="#icon-left"></use>
               </svg>
@@ -455,7 +460,7 @@
                 </div>
               </li>
             </ul>
-            <button class="trainers__button-right visually-hidden" type="button" >
+            <button class="trainers__button-right visually-hidden" type="button" aria-label="Вперед">
               <svg class="trainers__svg-desktop" width="16" height="32">
                 <use xlink:href="#icon-right"></use>
               </svg>
@@ -590,7 +595,7 @@
         <div class="continer">
           <h2>Отзывы</h2>
           <div class="reviews__wrapper">
-            <button class="reviews__button-left visually-hidden">
+            <button class="reviews__button-left visually-hidden" type="button" aria-label="Назад">
               <svg class="reviews__svg-desktop" width="16" height="32">
                 <use xlink:href="#icon-left"></use>
               </svg>
@@ -613,8 +618,7 @@
                 <h3>Анна Орлова</h3>
                 <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда
                   чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный,
-                  даже в вечернее время нет очередей»
-                </p>
+                  даже в вечернее время нет очередей»</p>
               </div>
             </div>
             <div class="reviews__item">
@@ -636,7 +640,7 @@
                 </p>
               </div>
             </div>
-            <button class="reviews__button-right visually-hidden">
+            <button class="reviews__button-right visually-hidden" type="button" aria-label="Вперед">
               <svg class="reviews__svg-desktop" width="16" height="32">
                 <use xlink:href="#icon-right"></use>
               </svg>
@@ -656,11 +660,11 @@
             <form class="footer__form" action="http://echo.htmlacademy.ru" method="post">
               <div class="footer__form-inputs">
                 <label class="visually-hidden" for="name-field">Имя</label>
-                <input type="text" name="name" id="name-field" placeholder="Имя" required>
+                <input type="text" name="name" id="name-field" placeholder="Имя" aria-label="Имя" required>
                 <label class="visually-hidden" for="tel-field">Телефон</label>
-                <input type="text" name="tel" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" id="tel-field" placeholder="Телефон" required>
+                <input type="text" name="tel" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" id="tel-field" placeholder="Телефон" aria-label="Телефон" required>
               </div>
-              <button type="submit" name="button">Отправить</button>
+              <button type="submit" name="button-submit" aria-label="Отправить">Отправить</button>
             </form>
           </div>
         </section>
@@ -678,10 +682,10 @@
                   <p>Пн-Вс: с 8:00 до 22:00</p>
                 </div>
               </div>
-              <div class="footer__contacts-item">
+              <div class="footer__contacts-item footer__contacts--2">
                 <div class="footer__contact">
                   <h3>Телефон:</h3>
-                  <a href="tel:88005555555">8-800-555-55-55</a>
+                  <a href="tel:88005555555">8-800-555-55-5</a>
                 </div>
                 <div class="footer__contact">
                   <h3>Email:</h3>
@@ -694,7 +698,11 @@
       </div>
       <div class="footer__nav">
         <div class="container footer__nav-container">
-          <a class="footer__logo">Supergym</a>
+          <a class="footer__logo">
+              <svg width="89" height="20">
+                  <use xlink:href="#icon-logo"/>
+                </svg>
+          </a>
           <ul class="footer__pages">
             <li class="footer-page"><a href="#">Услуги</a></li>
             <li><a href="#">Абонементы</a></li>
@@ -703,7 +711,7 @@
             <li><a href="#">Расписание</a></li>
           </ul>
           <div class="footer__social">
-            <a href="#">
+            <a class="footer__social-vk" href="#">
               <span class="visually-hidden">Вконтакте</span>
               <svg width="24" height="13">
                 <use xlink:href="#icon-vk"></use>
@@ -725,6 +733,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
