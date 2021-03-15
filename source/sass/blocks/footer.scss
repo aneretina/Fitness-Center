@@ -1,5 +1,7 @@
 .footer {
   padding-top: 67px;
+  box-sizing: border-box;
+  margin-top: auto;
 }
 
 .footer__wrapper {
@@ -142,6 +144,9 @@
 
 .footer__contact {
   padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .footer__contact h3 {
@@ -324,7 +329,7 @@
   }
 
   .footer__contacts-item {
-    min-width: 230px;
+    width: 230px;
   }
 
   .footer__contacts--2 {

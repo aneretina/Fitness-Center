@@ -26,33 +26,45 @@
   var currentIndexReviews;
   var keyIndexReviews;
 
+  var maxHeight = 0;
   var xDown = null;
   var yDown = null;
 
   if (abonements) {
     abonementsDuration.forEach(function (element) {
       element.addEventListener('click', function (evt) {
-        var target = evt.target;
-        if (target && target.classList.contains('abonements__duration-item')) {
-          for (var i = 0; i < abonementsDuration.length; i++) {
-            if (target === abonementsDuration[i]) {
-              for (var j = 0; j < abonementsLists.length; j++) {
-                abonementsLists[j].classList.add('abonements-hidden');
-                abonementsLists[j].classList.remove('abonements-show');
-                abonementsDuration[j].classList.remove('active');
-              }
-              if (abonementsLists[i].classList.contains('abonements-hidden')) {
-                abonementsLists[i].classList.remove('abonements-hidden');
-                abonementsLists[i].classList.add('abonements-show');
-                target.classList.add('active');
-              }
-            }
-          }
+        evt.preventDefault();
+        changeAbonements(evt);
+      });
+
+      element.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === 13) {
+          evt.preventDefault();
+          changeAbonements(evt);
         }
       });
     });
   }
 
+  function changeAbonements(evt) {
+    var target = evt.target;
+    if (target && target.classList.contains('abonements__duration-item')) {
+      for (var i = 0; i < abonementsDuration.length; i++) {
+        if (target === abonementsDuration[i]) {
+          for (var j = 0; j < abonementsLists.length; j++) {
+            abonementsLists[j].classList.add('abonements-hidden');
+            abonementsLists[j].classList.remove('abonements-show');
+            abonementsDuration[j].classList.remove('active');
+          }
+          if (abonementsLists[i].classList.contains('abonements-hidden')) {
+            abonementsLists[i].classList.remove('abonements-hidden');
+            abonementsLists[i].classList.add('abonements-show');
+            target.classList.add('active');
+          }
+        }
+      }
+    }
+  }
 
   function onSlidesHandler(slides, current, key) {
     for (var j = 0; j < slides.length; j++) {
@@ -203,6 +215,18 @@
       block: 'start'
     });
   });
+
+  function adjustSlider() {
+    reviewsItem.forEach(function (item) {
+      if (maxHeight < item.clientHeight) {
+        maxHeight = item.clientHeight;
+      } else {
+        item.style.minHeight = maxHeight + 'px';
+      }
+    });
+  }
+
+  adjustSlider();
 
   /* eslint-disable no-undef */
   /* eslint-disable new-cap */
