@@ -26,9 +26,9 @@
   var currentIndexReviews;
   var keyIndexReviews;
 
-  var maxHeight = 0;
   var xDown = null;
   var yDown = null;
+  var maxHeight = 0;
 
   if (abonements) {
     abonementsDuration.forEach(function (element) {
@@ -217,13 +217,17 @@
   });
 
   function adjustSlider() {
-    reviewsItem.forEach(function (item) {
-      if (maxHeight < item.clientHeight) {
-        maxHeight = item.clientHeight;
-      } else {
-        item.style.minHeight = maxHeight + 'px';
+    if (reviewsItem) {
+      for (var i = 0; i < reviewsItem.length; i++) {
+        if (maxHeight < reviewsItem[i].clientHeight) {
+          maxHeight = reviewsItem[i].clientHeight;
+        }
       }
-    });
+
+      for (var j = 0; j < reviewsItem.length; j++) {
+        reviewsItem[j].style.minHeight = maxHeight + 'px';
+      }
+    }
   }
 
   adjustSlider();
